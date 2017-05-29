@@ -1,7 +1,7 @@
 //
 // wia.h
 //
-// Copyright (c) 2017 Segment
+// Copyright (c) 2017 Wia Technologies Limited
 //
 
 #ifndef WIA_H
@@ -49,6 +49,7 @@ wia_event_new();
 typedef struct {
   const char *access_token;
   const char *rest_host;
+  const char *stream_mqtt_host;
 } wia_t;
 
 wia_t *

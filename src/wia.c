@@ -2,7 +2,7 @@
 //
 // wia.c
 //
-// Copyright (c) 2017 Segment
+// Copyright (c) 2017 Wia Technologies Limited
 //
 
 #include <stdlib.h>
@@ -29,6 +29,7 @@ wia_init(const char *access_token) {
 
   self->access_token = access_token;
   self->rest_host = "https://api.wia.io";
+  self->stream_mqtt_host = "mqtts://api.wia.io";
 
   return self;
 }

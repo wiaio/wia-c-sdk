@@ -4,7 +4,7 @@ OBJS := $(SRC:.c=.o)
 # Librarys
 INCLUDE := -I/usr/local/include
 LDFLAGS := -L/usr/local/lib
-LDLIBS := -lcurl
+LDLIBS := -lcurl -ljson-c
 
 CFLAGS := -std=c99 -Wall -Wextra -Ideps
 
