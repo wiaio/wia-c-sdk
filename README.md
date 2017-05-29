@@ -5,7 +5,7 @@ Note: This is still in beta and should not be used in production.
 # Development
 ```
 $ make test
-$ make
+$ ./test
 ```
 
 # Example

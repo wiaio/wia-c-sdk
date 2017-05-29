@@ -3,6 +3,7 @@ OBJS := $(SRC:.c=.o)
 
 # Librarys
 INCLUDE := -I/usr/local/include
+
 LDFLAGS := -L/usr/local/lib
 LDLIBS := -lcurl -ljson-c
 

@@ -63,7 +63,7 @@ wia_free(wia_t *self) {
 }
 
 int
-wia_event_create(wia_t *self, const char *event_name, const char *event_data) {
+wia_event_create(wia_t *self, const char *event_name, const char *event_data, int(*callback)(void)) {
   wia_event_t *event = wia_event_new();
 
   if (!event) {
@@ -75,6 +75,8 @@ wia_event_create(wia_t *self, const char *event_name, const char *event_data) {
 
   CURL *curl;
   CURLcode res;
+
+  //json_object test_obj;
 
   curl_global_init(CURL_GLOBAL_ALL);
 
@@ -112,6 +114,8 @@ wia_event_create(wia_t *self, const char *event_name, const char *event_data) {
   }
 
   curl_global_cleanup();
+
+  callback();
 
   return WIA_SUCCESS;
 }

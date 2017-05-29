@@ -59,6 +59,6 @@ void
 wia_free(wia_t *self);
 
 int
-wia_event_create(wia_t *self, const char *event_name, const char *event_data);
+wia_event_create(wia_t *self, const char *event_name, const char *event_data, int(*callback)(void));
 
 #endif // WIA_H
